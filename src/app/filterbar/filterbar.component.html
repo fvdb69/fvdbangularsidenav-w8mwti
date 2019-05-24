@@ -1,0 +1,59 @@
+<mat-toolbar color="primary">
+    <!-- filterbar -->
+    <mat-toolbar-row>
+      Cliënt: Resturant de Hemel (M0001)
+      <span class="spacer"></span>
+      <mat-icon class="icon" (click)="Toggle()">filter_list</mat-icon>
+    </mat-toolbar-row>
+
+    <!-- chip buttond -->
+    <mat-toolbar-row class="row-top">
+        <mat-chip-list>
+          <mat-chip *ngFor="let menu of goto">{{ menu }}</mat-chip>
+        </mat-chip-list>
+    </mat-toolbar-row>
+
+    <!-- filters -->
+    <mat-toolbar-row [ngClass]="{'show':showme === true, 'hidden':showme === false}">
+      <div class="samerow">
+        <!-- searchbox -->
+        <mat-form-field appearance="outline">
+          <mat-label>Zoeken in kolommen</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+
+        <!-- periode -->
+        <mat-form-field appearance="outline">
+        <mat-label>Periode</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let period of periode" [value]="period">
+            {{period}}
+          </mat-option>
+        </mat-select>
+        </mat-form-field>
+        <!-- status -->
+        <mat-form-field appearance="outline">
+        <mat-label>Status</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let state of status" [value]="state">
+            {{state}}
+          </mat-option>
+        </mat-select>
+        </mat-form-field>
+        <!-- radio -->
+        <div class="spaceleft">
+        <mat-radio-group aria-label="Select an option">
+          <mat-radio-button value="1" class="space">Option 1</mat-radio-button>
+          <mat-radio-button value="2">Option 2</mat-radio-button>
+        </mat-radio-group>
+        </div>
+        <div class="spaceleft">
+          <mat-slide-toggle>Slide me!</mat-slide-toggle>
+        </div>
+        <!-- closbutton -->
+        <span class="spacer"></span>
+        <button mat-icon-button (click)="Toggle()"><mat-icon>close</mat-icon></button>
+      </div>
+    </mat-toolbar-row>
+</mat-toolbar>

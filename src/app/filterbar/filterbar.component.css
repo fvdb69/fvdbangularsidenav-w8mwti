@@ -1,0 +1,57 @@
+.icon {
+  padding: 0 14px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.show {
+  padding-top: 10px;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+mat-icon, mat-chip {
+  cursor: pointer;
+}
+
+.right {
+  float: right;
+}
+
+mat-form-field, .space{
+  margin-right: 10px;
+}
+
+.spaceleft {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+mat-slide-toggle {
+ margin-top: 6px;
+}
+.samerow {
+  display: flex;
+}
+
+mat-chip-list {
+  margin-top: 8px;
+}
+
+font-small {
+  font-size: 10px;
+}
+
+mat-radio-button, mat-chip, mat-form-field.mat-form-field, mat-slide-toggle {
+  font-size: 12px;
+}
+
+.row-top {
+  margin-top: -25px;
+}
+

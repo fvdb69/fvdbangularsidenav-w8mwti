@@ -1,0 +1,35 @@
+.example-container {
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #Ffffff;
+  }
+.container {
+  padding: 20px;
+}
+
+.sidebar {
+  background-color :#4A5C69;
+  color: white;
+  width: 150px;
+}
+
+mat-sidenav a {
+  color: #ffffff;
+}
+
+mat-sidenav a:hover, a:focus, a:active {
+  color: yellow;
+}
+
+.side_header {
+  position: absolute;
+  top: 55px;
+}
+.right {
+  position: absolute;
+  top: 0px;
+  left: 109px;
+}
