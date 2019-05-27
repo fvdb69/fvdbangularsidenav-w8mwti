@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" style="height: 100%">
     <!-- filterbar -->
     <mat-toolbar-row>
       Cliënt: Resturant de Hemel (M0001)
@@ -7,15 +7,25 @@
     </mat-toolbar-row>
 
     <!-- chip buttond -->
-    <mat-toolbar-row class="row-top">
+    <mat-toolbar-row>
+      <div fxShow="true" fxHide.lt-md="true">
         <mat-chip-list>
           <mat-chip *ngFor="let menu of goto">{{ menu }}</mat-chip>
         </mat-chip-list>
+      </div>
+
+      <div fxShow="true" fxHide.gt-sm="true">
+        <!-- dropdown -->
+        <button mat-button [matMenuTriggerFor]="menu">Ga naar</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item *ngFor="let menu of goto"> {{ menu }}</button>
+        </mat-menu>
+      </div>
     </mat-toolbar-row>
 
     <!-- filters -->
     <mat-toolbar-row [ngClass]="{'show':showme === true, 'hidden':showme === false}">
-      <div class="samerow">
+      <div fxLayout='row wrap' fxLayoutAlign='start center'>
         <!-- searchbox -->
         <mat-form-field appearance="outline">
           <mat-label>Zoeken in kolommen</mat-label>
@@ -25,13 +35,14 @@
 
         <!-- periode -->
         <mat-form-field appearance="outline">
-        <mat-label>Periode</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let period of periode" [value]="period">
-            {{period}}
-          </mat-option>
-        </mat-select>
+          <mat-label>Periode</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let period of periode" [value]="period">
+              {{period}}
+            </mat-option>
+          </mat-select>
         </mat-form-field>
+        
         <!-- status -->
         <mat-form-field appearance="outline">
         <mat-label>Status</mat-label>
@@ -41,19 +52,24 @@
           </mat-option>
         </mat-select>
         </mat-form-field>
+
         <!-- radio -->
-        <div class="spaceleft">
-        <mat-radio-group aria-label="Select an option">
-          <mat-radio-button value="1" class="space">Option 1</mat-radio-button>
-          <mat-radio-button value="2">Option 2</mat-radio-button>
-        </mat-radio-group>
+        <div class="row-top">
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1" class="space">Option 1</mat-radio-button>
+            <mat-radio-button value="2">Option 2</mat-radio-button>
+          </mat-radio-group>
         </div>
-        <div class="spaceleft">
+
+        <div class="row-top">
           <mat-slide-toggle>Slide me!</mat-slide-toggle>
         </div>
+
         <!-- closbutton -->
         <span class="spacer"></span>
-        <button mat-icon-button (click)="Toggle()"><mat-icon>close</mat-icon></button>
+        <div class="row-top">
+          <button mat-icon-button (click)="Toggle()"><mat-icon>close</mat-icon></button>
+        </div>
       </div>
     </mat-toolbar-row>
 </mat-toolbar>

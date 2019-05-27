@@ -1,6 +1,6 @@
 <app-toolbar (sideNav)="Toggle()"></app-toolbar>
 <mat-sidenav-container class="example-container">
-  <mat-sidenav [(mode)]="mode" [(opened)]="opened" class="sidebar">
+  <mat-sidenav fxLayout="column" [(mode)]="mode" [(opened)]="opened" class="sidebar">
     <button mat-icon-button (click)="Pined()" class="right"
     matTooltip="Pined/Unpined sidebar"><mat-icon>{{ pintext }}</mat-icon></button>
     <div class="side_header">

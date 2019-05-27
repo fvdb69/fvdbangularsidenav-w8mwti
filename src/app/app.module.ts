@@ -5,6 +5,7 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatNativeDateModule} from '@angular/material';
 import { DemoMaterialModule} from './material-module';
 import { RouterModule, Routes } from '@angular/router';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
                   FormsModule,
                   DemoMaterialModule ,
                   MatNativeDateModule,
+                  FlexLayoutModule,
                   RouterModule.forRoot(
                     appRoutes,
                     { enableTracing: true } // <-- debugging purposes only

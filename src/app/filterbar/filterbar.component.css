@@ -53,5 +53,6 @@ mat-radio-button, mat-chip, mat-form-field.mat-form-field, mat-slide-toggle {
 
 .row-top {
   margin-top: -25px;
+  padding-left: 15px;
 }
 
