@@ -23,7 +23,7 @@
   display: grid;
   width: 100%;
   height: 100px;
-  background-color: 659B07;
+  background-color: #659B07;
   background-image: linear-gradient(to bottom right, #659B07, #F5F5F2);
   margin-bottom: 10px;
 }
