@@ -16,6 +16,7 @@ import { FilterbarComponent } from './filterbar/filterbar.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { TableComponent } from './table/table.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LinksComponent } from './links/links.component';
 
 
 const appRoutes: Routes = [
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
   { path: 'doc', component: DocumentationComponent },
   { path: 'start', component: DashboardComponent },
   { path: 'filter', component: FilterbarComponent },
+  { path: 'links', component: LinksComponent},
   { path: '', component: DashboardComponent },
 ];
 
@@ -39,7 +41,7 @@ const appRoutes: Routes = [
                     { enableTracing: true } // <-- debugging purposes only
                   )
                 ],
-  declarations: [ AppComponent, HelloComponent, SidebarComponent, ToolbarComponent, DocumentationComponent, FilterbarComponent, BreadcrumbComponent, TableComponent, DashboardComponent ],
+  declarations: [ AppComponent, HelloComponent, SidebarComponent, ToolbarComponent, DocumentationComponent, FilterbarComponent, BreadcrumbComponent, TableComponent, DashboardComponent, LinksComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

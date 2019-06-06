@@ -1,0 +1,18 @@
+<mat-tab-group>
+    <mat-tab label="School">
+       <div class="content" fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="5px" *ngFor="let urls of Urls">
+        <div fxFlex="30" *ngFor="let link of urls.items">
+              <mat-card class="card" >
+                <mat-card-header class="colorGreen"></mat-card-header>
+                <mat-card-title class="title">{{ link.name }} </mat-card-title>
+                <mat-card-content class="content">
+                  <a href="{{ link.url }}" target="_black">{{ link.url }}</a>
+                </mat-card-content>
+              </mat-card>
+            </div>
+        </div>
+    </mat-tab>
+
+  <mat-tab label="Nieuws">Nieuws </mat-tab>
+  <mat-tab label="Google">Google  </mat-tab>
+</mat-tab-group>
